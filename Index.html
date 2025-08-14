@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midt-Norsk Jakt- og Skytesimulator</title>
+    <!-- Last inn Tailwind CSS fra CDN for rask styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        
+    </style>
+</head>
+<body>
+
+    <!-- Hovedcontainer med en subtil, mørk bakgrunn for å skape en følelse av dybde -->
+    <div class="min-h-screen bg-stone-100 text-stone-800">
+
+        <!-- Navigasjonsbar -->
+        <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-stone-900">
+                    Midt-Norsk Jakt- og Skytesimulator
+                </a>
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a href="#fordeler" class="text-stone-600 hover:text-green-700 transition-colors">Fordeler</a>
+                    <a href="#scenarier" class="text-stone-600 hover:text-green-700 transition-colors">Scenarier</a>
+                    <a href="#medlemskap" class="text-stone-600 hover:text-green-700 transition-colors">Medlemskap</a>
+                    <a href="#kontakt" class="text-stone-600 hover:text-green-700 transition-colors">Kontakt</a>
+                </nav>
+                <a href="#medlemskap" class="bg-green-700 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-800 transition-colors shadow-lg hidden md:block">
+                    Kjøp Årskort
+                </a>
+                <!-- Mobilmeny (hamburger-ikon) - skjult på desktop -->
+                <button class="md:hidden text-stone-800" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobilmeny -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white p-4 mt-2 rounded-lg shadow-lg">
+                <nav class="flex flex-col space-y-2">
+                    <a href="#fordeler" class="text-stone-600 hover:text-green-700 transition-colors py-2">Fordeler</a>
+                    <a href="#scenarier" class="text-stone-600 hover:text-green-700 transition-colors py-2">Scenarier</a>
+                    <a href="#medlemskap" class="text-stone-600 hover:text-green-700 transition-colors py-2">Medlemskap</a>
+                    <a href="#kontakt" class="text-stone-600 hover:text-green-700 transition-colors py-2">Kontakt</a>
+                    <a href="#medlemskap" class="bg-green-700 text-white font-semibold py-2 px-4 rounded-full text-center hover:bg-green-800 transition-colors mt-4">
+                        Kjøp Årskort
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hovedseksjon (Hero) - Første inntrykk for brukeren -->
+        <main>
+            <section class="relative bg-center bg-cover h-96 md:h-[500px] flex items-center" style="background-image: url('https://placehold.co/1200x500/1e293b/a8a29e?text=Jeger+paa+rypejakt');">
+                <div class="absolute inset-0 bg-stone-900 opacity-60"></div>
+                <div class="container mx-auto text-center z-10 px-4">
+                    <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                        Din jakt- og skytesimulator i Midt-Norge
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl text-white max-w-2xl mx-auto">
+                        Tren på rype, elg, lerduer og mer. Ubegrenset skyting med årskortet, når det passer deg.
+                    </p>
+                    <a href="#medlemskap" class="mt-8 inline-block bg-green-700 text-white font-semibold text-lg py-3 px-8 rounded-full hover:bg-green-800 transition-transform transform hover:scale-105 shadow-xl">
+                        Bli medlem i dag!
+                    </a>
+                </div>
+            </section>
+
+            <!-- Seksjon for fordeler med årskortet -->
+            <section id="fordeler" class="py-16 bg-white">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold text-stone-900 mb-12">Hvorfor velge vårt årskort?</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Fordel 1: Ubegrenset skyting -->
+                        <div class="p-8 rounded-2xl bg-stone-50 shadow-md transform transition-transform hover:scale-105">
+                            <div class="text-4xl text-green-700 mb-4">🎯</div>
+                            <h3 class="text-xl font-semibold mb-2">Ubegrenset trening</h3>
+                            <p class="text-stone-600">Skyt så mye du vil i løpet av året. Perfekt for å finpusse ferdighetene dine før jaktsesongen.</p>
+                        </div>
+                        <!-- Fordel 2: Selvbetjente åpningstider -->
+                        <div class="p-8 rounded-2xl bg-stone-50 shadow-md transform transition-transform hover:scale-105">
+                            <div class="text-4xl text-green-700 mb-4">📅</div>
+                            <h3 class="text-xl font-semibold mb-2">Fleksibilitet</h3>
+                            <p class="text-stone-600">Selvbetjente åpningstider gir deg frihet til å trene når det passer deg, utenom de vanlige arbeidstidene.</p>
+                        </div>
+                        <!-- Fordel 3: Forskjellige scenarier -->
+                        <div class="p-8 rounded-2xl bg-stone-50 shadow-md transform transition-transform hover:scale-105">
+                            <div class="text-4xl text-green-700 mb-4">🌲</div>
+                            <h3 class="text-xl font-semibold mb-2">Realistiske jaktscenarier</h3>
+                            <p class="text-stone-600">Velg mellom et bredt utvalg av jaktformer, inkludert rype, elg, lerduer og mer.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seksjon for jaktscenarier -->
+            <section id="scenarier" class="py-16 bg-stone-100">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold text-stone-900 mb-12">Simuler jakt på ...</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Jakt på elg -->
+                        <div class="relative overflow-hidden rounded-2xl group shadow-lg">
+                            <img src="https://placehold.co/800x600/2c3e50/ecf0f1?text=Elg+jakt" alt="Bilde av elgjakt-simulering" class="w-full h-64 object-cover transform transition-transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-stone-900 bg-opacity-50 flex items-center justify-center">
+                                <span class="text-white text-2xl font-bold">Elg</span>
+                            </div>
+                        </div>
+                        <!-- Jakt på rype -->
+                        <div class="relative overflow-hidden rounded-2xl group shadow-lg">
+                            <img src="https://placehold.co/800x600/34495e/ecf0f1?text=Rype+jakt" alt="Bilde av rypejakt-simulering" class="w-full h-64 object-cover transform transition-transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-stone-900 bg-opacity-50 flex items-center justify-center">
+                                <span class="text-white text-2xl font-bold">Rype</span>
+                            </div>
+                        </div>
+                        <!-- Lerdueskyting -->
+                        <div class="relative overflow-hidden rounded-2xl group shadow-lg">
+                            <img src="https://placehold.co/800x600/1a1a1a/cccccc?text=Lerdueskyting" alt="Bilde av lerdueskyting" class="w-full h-64 object-cover transform transition-transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-stone-900 bg-opacity-50 flex items-center justify-center">
+                                <span class="text-white text-2xl font-bold">Lerduer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seksjon for medlemskap/årskort med betalingsskjema -->
+            <section id="medlemskap" class="py-16 bg-white">
+                <div class="container mx-auto px-4 text-center max-w-2xl">
+                    <h2 class="text-3xl font-bold text-stone-900 mb-4">Årskort: Ditt medlemskap for ubegrenset trening</h2>
+                    <p class="text-lg text-stone-600 mb-8">
+                        Fyll inn telefonnummeret ditt for å starte Vipps-betalingen og bli medlem.
+                    </p>
+                    <div class="bg-green-700 text-white p-8 rounded-3xl shadow-xl transform transition-transform hover:scale-105">
+                        <h3 class="text-2xl font-bold">Pris: 2499,- / år</h3>
+                        <p class="mt-2 text-lg">Betal enkelt med Vipps.</p>
+                       
+                        <!-- Betalingsskjema -->
+                        <form id="paymentForm" class="mt-6 space-y-4">
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Ditt Vipps-telefonnummer" required
+                                class="w-full px-4 py-3 rounded-full text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <button type="submit" class="w-full bg-white text-green-700 font-bold py-3 px-10 rounded-full text-lg hover:bg-stone-200 transition-colors">
+                                Betal med Vipps
+                            </button>
+                        </form>
+                       
+                        <!-- Meldingsboks for tilbakemelding -->
+                        <div id="messageBox" class="mt-4 text-sm text-stone-200 hidden">
+                            <!-- Meldinger vil dukke opp her -->
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seksjon for ofte stilte spørsmål og kontakt -->
+            <section id="kontakt" class="py-16 bg-stone-100">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-stone-900 text-center mb-12">Ofte stilte spørsmål & Kontakt</h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <!-- FAQ -->
+                        <div>
+                            <div class="space-y-4">
+                                <details class="bg-white p-4 rounded-lg shadow-md">
+                                    <summary class="font-semibold text-stone-800 cursor-pointer">
+                                        Hvordan fungerer selvbetjeningen?
+                                    </summary>
+                                    <p class="text-stone-600 mt-2">
+                                        Med årskortet får du tilgang til lokalene via en kode, slik at du kan trene uavhengig av faste åpningstider.
+                                    </p>
+                                </details>
+                                <details class="bg-white p-4 rounded-lg shadow-md">
+                                    <summary class="font-semibold text-stone-800 cursor-pointer">
+                                        Hvilke betalingsmåter støtter dere?
+                                    </summary>
+                                    <p class="text-stone-600 mt-2">
+                                        Vi aksepterer betaling via Vipps for alle våre årskort. Du vil få en Vipps-lenke når du melder deg inn.
+                                    </p>
+                                </details>
+                                <details class="bg-white p-4 rounded-lg shadow-md">
+                                    <summary class="font-semibold text-stone-800 cursor-pointer">
+                                        Kan jeg booke tid på forhånd?
+                                    </summary>
+                                    <p class="text-stone-600 mt-2">
+                                        Informasjon om booking og tidsbestilling for medlemmer vil bli sendt ut etter at du har betalt årskortet.
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                        <!-- Kontaktinformasjon -->
+                        <div class="bg-green-700 text-white p-8 rounded-2xl shadow-xl">
+                            <h3 class="text-2xl font-bold mb-4">Kontakt oss</h3>
+                            <p class="text-lg mb-2">Har du flere spørsmål?</p>
+                            <div class="space-y-2">
+                                <p><strong>E-post:</strong> <a href="mailto:kontakt@jaktogsim.no" class="hover:underline">kontakt@jaktogsim.no</a></p>
+                                <p><strong>Telefon:</strong> <a href="tel:12345678" class="hover:underline">12 34 56 78</a></p>
+                                <p><strong>Adresse:</strong> Storgata 1, 7011 Trondheim</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bunntekst -->
+        <footer class="bg-stone-900 text-stone-400 p-8 text-center mt-8">
+            <p>&copy; 2024 Midt-Norsk Jakt- og Skytesimulator. Alle rettigheter reservert.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Forhindrer at skjemaet sender data på tradisjonell måte
+
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const messageBox = document.getElementById('messageBox');
+            messageBox.classList.remove('hidden');
+            messageBox.innerHTML = 'Behandler betaling... Vennligst vent.';
+           
+            // Simulerer et asynkront API-kall til en backend-server
+            // I en ekte applikasjon ville du her gjort et "fetch"-kall til din egen server
+            setTimeout(() => {
+                // Her ville serveren din sende telefonnummeret og beløpet til Vipps API
+                // og Vipps ville returnere en URL for betaling eller en status
+               
+                // For demonstrasjonsformål, simulerer vi en suksessmelding
+                messageBox.innerHTML = `<p>Betalingsforespørsel sendt til Vipps på nummer: <strong>${phoneNumber}</strong>.</p>
+                                        <p>Vennligst åpne Vipps-appen for å fullføre betalingen.</p>`;
+                messageBox.classList.add('bg-green-700', 'text-white', 'p-4', 'rounded-xl');
+               
+                // I et ekte scenario ville du her videresende brukeren til Vipps-betalingssiden
+                // window.location.href = vippsPaymentUrl;
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
