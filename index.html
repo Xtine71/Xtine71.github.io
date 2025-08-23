@@ -11,7 +11,10 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f7f7f7;
-        
+        /* Denne CSS-klassen hindrer navigasjonsbaren i å overlappe med innholdet ved navigering */
+        .scroll-mt-24 {
+            scroll-margin-top: 6rem;
+        }
     </style>
 </head>
 <body>
@@ -209,7 +212,7 @@
             </section>
 
             <!-- Bildegalleri -->
-            <section id="galleri" class="py-16 bg-white">
+            <section id="galleri" class="py-16 bg-white scroll-mt-24">
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-stone-900 text-center mb-12">Galleri</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -347,6 +350,7 @@
 </body>
 
 </html>
+
 
 
 
